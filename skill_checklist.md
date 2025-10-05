@@ -124,10 +124,16 @@ python example_typer.py greet Evan --count 3
 - You want minimal dependencies and total control → venv + pip (optionally add pip-tools for lock files).
 
 - You’re building an application and just want env + install + lock with simple commands → Pipenv.
+- - pipenv install
+- - pipenv install polars
+- - pipenv shell
+- Now you've got a different kind of virtual environment
 
 - You’re building a library (or an app) and want modern packaging, deterministic locks, and easy publish → Poetry.
 
 ### 🔲 Dependency management (requirements.txt, Pipfile, pyproject.toml)
+
+#### pipfile
 
 ### 🔲 Unit testing (pytest, unittest)
 
