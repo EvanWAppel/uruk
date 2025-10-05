@@ -135,7 +135,23 @@ python example_typer.py greet Evan --count 3
 
 #### pipfile
 
+#### pyproject.toml
+
 ### 🔲 Unit testing (pytest, unittest)
+
+Probably should be using pytest, not unittest
+
+```python
+import pytest
+# test_math_pytest.py
+def add(x, y):
+    return x + y
+
+def test_add():
+    assert add(2, 3) == 5
+    assert add(2, -3) != 5
+```
+
 
 ### 🔲 Linting and style guides (black, flake8, isort, pylint)
 
