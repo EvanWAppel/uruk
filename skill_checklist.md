@@ -54,7 +54,7 @@ mypy example.py
 
 Allows you to write python functions that accept arguments in the CLI
 
-#### argparse
+#### ❌ argparse
 
 ```python
 # example_argparse.py
@@ -70,9 +70,62 @@ for _ in range(args.count):
     print(f"Hello, {args.name}!")
 ```
 
+```bash
+python example_argparse.py Evan --count 3
+```
 
+#### ❌ click
+
+Uses decorators, but not type safe
+
+```python
+# example_click.py
+import click
+
+@click.command()
+@click.argument("name")
+@click.option("--count", default=1, help="How many greetings")
+def greet(name, count):
+    for _ in range(count):
+        click.echo(f"Hello, {name}!")
+
+if __name__ == "__main__":
+    greet()
+```
+```bash
+python example_click.py Evan --count 3
+```
+
+#### ✅ typer
+
+Click, but with type hinting
+
+```python
+# example_typer.py
+import typer
+
+app = typer.Typer()
+
+@app.command()
+def greet(name: str, count: int = 1):
+    for _ in range(count):
+        print(f"Hello, {name}!")
+
+if __name__ == "__main__":
+    app()
+```
+
+```bash
+python example_typer.py greet Evan --count 3
+```
 
 ### 🔲 Virtual environments (venv, pipenv, or poetry)
+
+- You want minimal dependencies and total control → venv + pip (optionally add pip-tools for lock files).
+
+- You’re building an application and just want env + install + lock with simple commands → Pipenv.
+
+- You’re building a library (or an app) and want modern packaging, deterministic locks, and easy publish → Poetry.
 
 ### 🔲 Dependency management (requirements.txt, Pipfile, pyproject.toml)
 
