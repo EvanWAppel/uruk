@@ -155,6 +155,103 @@ def test_add():
 
 ### 🔲 Linting and style guides (black, flake8, isort, pylint)
 
+#### black
+
+"You can get it in any color you like as long as it's black."
+
+Uncompromising code formatter.
+
+```bash
+pip install black
+black .
+```
+
+Configure in pyproject.toml
+
+```
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+```
+
+#### flake 8
+
+Checks for PEP8 violations
+
+```bash
+pip install flake8
+flake8 .
+```
+
+```
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]  # makes it compatible with Black
+```
+
+#### isort
+
+Import sorter
+
+```bash
+pip install isort
+isort .
+```
+
+#### pylint
+
+Linter
+
+```bash
+pip install pylint
+pylint project_name
+```
+
+```
+[tool.pylint.'MESSAGES CONTROL']
+disable = ["C0114", "C0115", "C0116"]  # ignore docstring warnings
+```
+
+#### ruff
+
+Does all of the above. 
+
+lint, autofix, and format
+
+```bash
+ruff check .
+ruff check --fix .
+ruff format .
+```
+
+```
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+# Enable rules from various categories (these mirror flake8 plugins)
+select = [
+  "E",  # pycodestyle errors
+  "F",  # pyflakes
+  "I",  # isort imports
+  "N",  # naming
+  "D",  # pydocstyle
+  "UP", # pyupgrade
+]
+
+ignore = ["E501", "D203", "D212"]  # Example: ignore long lines & docstring rules
+
+# Optional: organize imports automatically
+[tool.ruff.isort]
+known-first-party = ["my_project"]
+combine-as-imports = true
+
+# Optional: match Black’s formatting rules
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+```
+
 ## Intermediate to Advanced Topics
 
 🔲 Functional programming concepts (map/filter/reduce, immutability)
@@ -327,174 +424,174 @@ def test_add():
 
 ☁️ 6. Cloud & DevOps Fundamentals
 
-Cloud Platforms (choose at least one)
+## Cloud Platforms (choose at least one)
 
- AWS (S3, Lambda, ECS, RDS, CloudWatch, Glue)
+🔲 AWS (S3, Lambda, ECS, RDS, CloudWatch, Glue)
 
- Google Cloud Platform (BigQuery, Cloud Run, Cloud Storage)
+🔲 Google Cloud Platform (BigQuery, Cloud Run, Cloud Storage)
 
- Azure (Blob Storage, Synapse)
+🔲 Azure (Blob Storage, Synapse)
 
-Containerization / Deployment
+## Containerization / Deployment
 
- Docker (images, containers, volumes, networking)
+🔲 Docker (images, containers, volumes, networking)
 
- Docker Compose for multi-service apps
+🔲 Docker Compose for multi-service apps
 
- Kubernetes (optional but valuable)
+🔲 Kubernetes (optional but valuable)
 
- Infrastructure as Code (Terraform, Pulumi, or CloudFormation)
+🔲 Infrastructure as Code (Terraform, Pulumi, or CloudFormation)
 
-CI/CD & Automation
+## CI/CD & Automation
 
- GitHub Actions or GitLab CI/CD
+🔲 GitHub Actions or GitLab CI/CD
 
- Automated testing pipelines
+🔲 Automated testing pipelines
 
- Linting, build, and deploy workflows
+🔲 Linting, build, and deploy workflows
 
- Version tagging and releases
+🔲 Version tagging and releases
 
- Environment promotion (dev → staging → prod)
+🔲 Environment promotion (dev → staging → prod)
 
-🧮 7. Data Architecture & Modeling
+# 🧮 7. Data Architecture & Modeling
 
-Conceptual Skills
+## Conceptual Skills
 
- Star vs. Snowflake schema design
+🔲 Star vs. Snowflake schema design
 
- Slowly Changing Dimensions (SCD) types
+🔲 Slowly Changing Dimensions (SCD) types
 
- Fact vs. Dimension tables
+🔲 Fact vs. Dimension tables
 
- Data normalization and denormalization
+🔲 Data normalization and denormalization
 
- OLTP vs. OLAP systems
+🔲 OLTP vs. OLAP systems
 
- Data lake vs. data warehouse
+🔲 Data lake vs. data warehouse
 
- Batch vs. streaming data pipelines
+🔲 Batch vs. streaming data pipelines
 
-Performance & Scalability
+## Performance & Scalability
 
- Partitioning and indexing
+🔲 Partitioning and indexing
 
- Compression and file formats (Parquet, ORC)
+🔲 Compression and file formats (Parquet, ORC)
 
- Query optimization and caching
+🔲 Query optimization and caching
 
- Distributed processing concepts
+🔲 Distributed processing concepts
 
-🧠 8. Software Engineering Practices
+# 🧠 8. Software Engineering Practices
 
-Code Quality & Maintenance
+## Code Quality & Maintenance
 
- Writing docstrings and README files
+🔲 Writing docstrings and README files
 
- Applying SOLID and DRY principles
+🔲 Applying SOLID and DRY principles
 
- Modular and reusable code design
+🔲 Modular and reusable code design
 
- Unit and integration testing
+🔲 Unit and integration testing
 
- Logging and monitoring practices
+🔲 Logging and monitoring practices
 
- Exception handling patterns
+🔲 Exception handling patterns
 
- Versioning and semantic releases
+🔲 Versioning and semantic releases
 
-Team Practices
+## Team Practices
 
- Agile / Scrum workflows
+🔲 Agile / Scrum workflows
 
- Code reviews and pull requests
+🔲 Code reviews and pull requests
 
- Git branching strategies (GitFlow, trunk-based)
+🔲 Git branching strategies (GitFlow, trunk-based)
 
- Technical documentation (architecture diagrams, ADRs)
+🔲 Technical documentation (architecture diagrams, ADRs)
 
- Issue tracking (Jira, GitHub Issues)
+🔲 Issue tracking (Jira, GitHub Issues)
 
-🧩 9. Analytics / Business Understanding (Still Useful)
+# 🧩 9. Analytics / Business Understanding (Still Useful)
 
-Even though you’re moving beyond pure analysis, these remain valuable:
+## Even though you’re moving beyond pure analysis, these remain valuable:
 
- Business metrics, KPIs, and OKRs
+🔲 Business metrics, KPIs, and OKRs
 
- A/B testing fundamentals
+🔲 A/B testing fundamentals
 
- Marketing and product analytics data structures
+🔲 Marketing and product analytics data structures
 
- BI tool integration (Tableau, Looker, PowerBI)
+🔲 BI tool integration (Tableau, Looker, PowerBI)
 
- Data storytelling and presentation skills
+🔲 Data storytelling and presentation skills
 
- Communicating technical ideas to non-technical stakeholders
+🔲 Communicating technical ideas to non-technical stakeholders
 
-🔒 10. Security & Reliability
+# 🔒 10. Security & Reliability
 
- Secure credential storage (.env, Secrets Manager)
+🔲 Secure credential storage (.env, Secrets Manager)
 
- HTTPS and SSL/TLS basics
+🔲 HTTPS and SSL/TLS basics
 
- Authentication & authorization models
+🔲 Authentication & authorization models
 
- Input validation and sanitization
+🔲 Input validation and sanitization
 
- Logging sensitive data safely
+🔲 Logging sensitive data safely
 
- Database backup strategies
+🔲 Database backup strategies
 
- Data retention and compliance (GDPR basics)
+🔲 Data retention and compliance (GDPR basics)
 
-📦 11. Tooling & Utilities
+# 📦 11. Tooling & Utilities
 
-Dev Tools
+## Dev Tools
 
- VS Code / PyCharm proficiency
+🔲 VS Code / PyCharm proficiency
 
- Shell scripting (Bash / Zsh)
+🔲 Shell scripting (Bash / Zsh)
 
- Makefiles for automation
+🔲 Makefiles for automation
 
- CLI productivity (grep, jq, awk, sed)
+🔲 CLI productivity (grep, jq, awk, sed)
 
- API testing tools (Postman, Insomnia)
+🔲 API testing tools (Postman, Insomnia)
 
-Documentation Tools
+## Documentation Tools
 
- Markdown fluency
+🔲 Markdown fluency
 
- Mermaid.js for diagrams
+🔲 Mermaid.js for diagrams
 
- Sphinx / MkDocs for documentation
+🔲 Sphinx / MkDocs for documentation
 
- Swagger / OpenAPI for API docs
+🔲 Swagger / OpenAPI for API docs
 
-📚 12. Theoretical Knowledge & Architecture Concepts
+# 📚 12. Theoretical Knowledge & Architecture Concepts
 
- Event-driven architecture
+🔲 Event-driven architecture
 
- Message queues (Kafka, RabbitMQ, SQS)
+🔲 Message queues (Kafka, RabbitMQ, SQS)
 
- CAP theorem, consistency vs. availability
+🔲 CAP theorem, consistency vs. availability
 
- Idempotency in APIs and data processing
+🔲 Idempotency in APIs and data processing
 
- Distributed computing basics
+🔲 Distributed computing basics
 
- Microservices architecture and communication patterns
+🔲 Microservices architecture and communication patterns
 
- Design patterns (Repository, Singleton, Factory, Adapter)
+🔲 Design patterns (Repository, Singleton, Factory, Adapter)
 
-💬 13. Communication & Teaching (Your Hidden Strength)
+# 💬 13. Communication & Teaching (Your Hidden Strength)
 
- Translating technical systems into business language
+✅ Translating technical systems into business language
 
- Writing internal documentation and training materials
+✅ Writing internal documentation and training materials
 
- Presenting demos to stakeholders
+✅ Presenting demos to stakeholders
 
- Pair programming and mentorship
+✅ Pair programming and mentorship
 
- Teaching complex concepts simply
+✅ Teaching complex concepts simply

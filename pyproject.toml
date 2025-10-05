@@ -23,6 +23,7 @@ myapp = "my_app.main:cli"
 
 [tool.black]
 line-length = 88
+target-version = ["py313"]
 
 [tool.ruff]
 select = ["E", "F"]
