@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evan Appel | Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="blog-page">
+  <header class="site-header">
+    <div class="logo">Evan Appel</div>
+    <nav class="site-nav">
+      <a href="index.html#about">About</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#humor">Humor</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="blog-main">
+    <section class="blog-hero">
+      <h1>The blog</h1>
+      <p>
+        Musings on engineering craft, storytelling structure, and the comedic relief that keeps both humming.
+        Subscribe to stay in the loop when a new post drops.
+      </p>
+      <form class="subscribe-form">
+        <label class="visually-hidden" for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <section class="blog-list">
+      <article class="post-card">
+        <span class="post-meta">July 12, 2024 · Engineering</span>
+        <h2><a href="#">The Architecture of a Punchline</a></h2>
+        <p>
+          Breaking down how comedic timing and software architecture both depend on sequencing, surprise, and impeccable delivery.
+        </p>
+        <a class="read-more" href="#">Read more</a>
+      </article>
+
+      <article class="post-card">
+        <span class="post-meta">June 28, 2024 · Writing</span>
+        <h2><a href="#">Ship the Draft</a></h2>
+        <p>
+          Lessons from taking drafts to done—whether it’s a blog post, a feature spec, or that stand-up set you’ve been rehearsing in the mirror.
+        </p>
+        <a class="read-more" href="#">Read more</a>
+      </article>
+
+      <article class="post-card">
+        <span class="post-meta">June 8, 2024 · Humor</span>
+        <h2><a href="#">Comedy as Team Glue</a></h2>
+        <p>
+          How a well-placed joke can defuse tension in code reviews, keep morale high, and spark better collaboration.
+        </p>
+        <a class="read-more" href="#">Read more</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="current-year"></span> Evan Appel. Crafted with curiosity and a little bit of comedic timing.</p>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

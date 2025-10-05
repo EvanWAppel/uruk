@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evan Appel | Coder · Writer · Humorist</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Evan Appel</div>
+    <nav class="site-nav">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#humor">Humor</a>
+      <a href="blog.html">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <div class="hero-text">
+        <h1>Coding with craft. Writing with clarity. Laughing on purpose.</h1>
+        <p>
+          I’m Evan Appel—an engineer who ships thoughtful products, a writer who shapes narrative,
+          and a humorist who finds the punchline in every pull request.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="blog.html">Read the blog</a>
+          <a class="button ghost" href="#contact">Let’s connect</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h2>Currently</h2>
+        <ul>
+          <li>Building resilient systems with clean, modern code</li>
+          <li>Drafting essays on creativity, technology, and comedy</li>
+          <li>Fine-tuning a tight five for the next open mic night</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <h2>Engineering with empathy</h2>
+      <p class="section-intro">
+        I design software experiences that get out of the user’s way. These highlighted projects blend
+        strong technical foundations with a focus on the people who use them every day.
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Uruk Analytics</h3>
+          <p>Full-stack dashboard turning raw logistics data into actionable insights, served with TypeScript, Node.js, and a tasteful sprinkle of data viz.</p>
+        </article>
+        <article class="card">
+          <h3>Polaris</h3>
+          <p>Lightweight design system enabling teams to ship accessible interfaces faster than you can say “component library.”</p>
+        </article>
+        <article class="card">
+          <h3>Signal Beacon</h3>
+          <p>Alerting platform with observability baked in, helping on-call engineers sleep through the night more often.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="writing">
+      <h2>Words that work</h2>
+      <p class="section-intro">
+        From technical deep dives to narrative essays, I write to make complex ideas approachable. Here’s a taste of recent favorites.
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Refactoring the Creative Brain</h3>
+          <p>An essay on how shipping software and shaping stories share the same iterative, curiosity-driven process.</p>
+        </article>
+        <article class="card">
+          <h3>Humor in the Git Logs</h3>
+          <p>A playful guide to humanizing pull requests without sacrificing clarity, featuring cringe-worthy commit puns.</p>
+        </article>
+        <article class="card">
+          <h3>The Art of the Debugged Joke</h3>
+          <p>What stand-up can teach engineers about audience feedback loops and tight feedback cycles.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section accent" id="humor">
+      <div class="humor-content">
+        <h2>Humor, but make it shipping-ready</h2>
+        <p>
+          Whether it’s a live set or a remote stand-up (comedy) for distributed teams, I bring levity that aligns with the moment.
+          Expect smart, empathetic jokes delivered with timing that would make a linter proud.
+        </p>
+        <blockquote>
+          “Evan’s the rare engineer who can refactor a codebase and the vibe in the same sprint.”
+          <cite>— A teammate who definitely exists</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Let’s build something (and laugh about it later)</h2>
+      <p class="section-intro">
+        Drop me a note about collaborations, writing partnerships, or comedy gigs. Bonus points if you include your favorite clean bug fix joke.
+      </p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Reach out</h3>
+          <a href="mailto:evan@uruk.dev" class="contact-link">evan@uruk.dev</a>
+        </div>
+        <div class="contact-card">
+          <h3>Find me online</h3>
+          <ul class="social-links">
+            <li><a href="https://x.com/evanappel" target="_blank" rel="noopener">X (formerly Twitter)</a></li>
+            <li><a href="https://www.linkedin.com/in/evanappel" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/evanappel" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="current-year"></span> Evan Appel. Crafted with curiosity and a little bit of comedic timing.</p>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
